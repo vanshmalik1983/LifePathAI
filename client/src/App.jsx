@@ -18,7 +18,7 @@ import GoalsPage      from "./pages/GoalsPage";
 import PDFReportPage  from "./pages/PDFReportPage";
 import ChatPage       from "./pages/ChatPage";
 // Correct
-import { Spinner, Card, Btn } from "./components/UI";
+import { Spinner, Card, Btn } from "./components/UI.jsx";
 
 const APP_PAGES = ["dashboard","ai-analysis","loan-relief","finance","goals","pdf-report","chat"];
 
