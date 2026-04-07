@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080814; --surface:rgba(13,13,31,0.95); --border:rgba(108,99,255,0.18);
+  --primary:#6C63FF; --cyan:#38BDF8; --text:#F1F5F9; --muted:#64748B;
+  --green:#22C55E; --yellow:#FBBF24; --red:#EF4444; --orange:#F97316;
+  --card:rgba(13,13,31,0.9); --radius:16px; --radius-sm:10px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font-family:inherit}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto}
+::-webkit-scrollbar{width:4px;background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#1E293B;border-radius:3px}
+
+/* ── Animations ──────────────────────────────── */
+@keyframes fadeUp   {from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn   {from{opacity:0}to{opacity:1}}
+@keyframes slideIn  {from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideRight{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+@keyframes float    {0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes float2   {0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes pulse    {0%,100%{opacity:1}50%{opacity:0.4}}
+@keyframes spin     {to{transform:rotate(360deg)}}
+@keyframes shimmer  {0%{background-position:-400px 0}100%{background-position:400px 0}}
+@keyframes bounceIn {0%{transform:scale(0.8);opacity:0}60%{transform:scale(1.05)}100%{transform:scale(1);opacity:1}}
+@keyframes glow     {0%,100%{box-shadow:0 0 20px rgba(108,99,255,0.3)}50%{box-shadow:0 0 40px rgba(108,99,255,0.6)}}
+@keyframes countUp  {from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+.au{animation:fadeUp .5s ease forwards}
+.au1{animation:fadeUp .5s .1s ease both}
+.au2{animation:fadeUp .5s .2s ease both}
+.au3{animation:fadeUp .5s .3s ease both}
+.au4{animation:fadeUp .5s .4s ease both}
+.au5{animation:fadeUp .5s .5s ease both}
+.af{animation:fadeIn .4s ease forwards}
+.sl{animation:slideIn .4s ease forwards}
+.sl1{animation:slideIn .4s .1s ease both}
+.sl2{animation:slideIn .4s .2s ease both}
+.sl3{animation:slideIn .4s .3s ease both}
+.sr{animation:slideRight .4s ease forwards}
+.float{animation:float 4s ease-in-out infinite}
+.float2{animation:float2 5s ease-in-out .6s infinite}
+.apulse{animation:pulse 2s ease-in-out infinite}
+.aspin{animation:spin .8s linear infinite}
+.aglow{animation:glow 2s ease-in-out infinite}
+.abounce{animation:bounceIn .5s ease forwards}
+
+/* Skeleton */
+.skel{background:linear-gradient(90deg,#1E293B 25%,#2D3748 50%,#1E293B 75%);background-size:400px 100%;animation:shimmer 1.5s infinite;border-radius:8px}
+
+/* Glass */
+.glass{background:rgba(13,13,31,0.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(108,99,255,0.15);border-radius:var(--radius)}
+
+/* Gradient text */
+.grad-text{background:linear-gradient(135deg,var(--primary),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ── Responsive ──────────────────────────────── */
+@media(max-width:768px){
+  .hide-mobile{display:none!important}
+  .mobile-full{width:100%!important}
+  .mobile-col{flex-direction:column!important}
+  .mobile-p{padding:16px!important}
+  .mobile-grid-1{grid-template-columns:1fr!important}
+}
+@media(max-width:480px){
+  .mobile-text-sm{font-size:13px!important}
+  .mobile-gap-sm{gap:10px!important}
+}
