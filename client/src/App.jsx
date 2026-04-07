@@ -17,7 +17,8 @@ import FinancePage    from "./pages/FinancePage";
 import GoalsPage      from "./pages/GoalsPage";
 import PDFReportPage  from "./pages/PDFReportPage";
 import ChatPage       from "./pages/ChatPage";
-import { Spinner }    from "./components/UI";
+// Correct
+import { Spinner, Card, Btn } from "./components/UI";
 
 const APP_PAGES = ["dashboard","ai-analysis","loan-relief","finance","goals","pdf-report","chat"];
 
