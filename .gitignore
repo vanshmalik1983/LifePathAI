@@ -1,0 +1,17 @@
+# Ignore env files in any folder
+*.env
+
+# Node modules for both client and server
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Build/output folders
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
